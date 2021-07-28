@@ -1,0 +1,7 @@
+apiVersion: cache.beezlabs.com/v1alpha1
+kind: SimpleOperator
+metadata:
+  name: simpleoperator-sample
+spec:
+  # Add fields here
+  foo: bar

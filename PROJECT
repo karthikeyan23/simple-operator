@@ -6,4 +6,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: simple-operator
 repo: github.com/karthikeyan23/simple-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: beezlabs.com
+  group: cache
+  kind: SimpleOperator
+  path: github.com/karthikeyan23/simple-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"

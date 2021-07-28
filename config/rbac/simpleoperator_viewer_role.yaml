@@ -1,0 +1,20 @@
+# permissions for end users to view simpleoperators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: simpleoperator-viewer-role
+rules:
+- apiGroups:
+  - cache.beezlabs.com
+  resources:
+  - simpleoperators
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cache.beezlabs.com
+  resources:
+  - simpleoperators/status
+  verbs:
+  - get

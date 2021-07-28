@@ -1,0 +1,24 @@
+# permissions for end users to edit simpleoperators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: simpleoperator-editor-role
+rules:
+- apiGroups:
+  - cache.beezlabs.com
+  resources:
+  - simpleoperators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.beezlabs.com
+  resources:
+  - simpleoperators/status
+  verbs:
+  - get
